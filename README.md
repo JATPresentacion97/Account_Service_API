@@ -15,9 +15,9 @@ Account Service is a Spring Boot microservice that provides account management f
 
 ## Technologies Used
 
-- Java 11
-- Spring Boot 2.x
-- Maven 3.6.x
+- Java 17
+- Spring Boot 3.3.4
+- Gradle 7.x
 - JUnit 5
 - Mockito
 - H2 Database (for testing)
@@ -30,20 +30,20 @@ Account Service is a Spring Boot microservice that provides account management f
 2. Navigate to the project directory:
    - `cd account-service`
    
-3. Build the project using Maven:
-   - `mvn clean install`
+3. Build the project using Gradle:
+   - `./gradlew build`
 
 ## Running the Application
 
 To run the application locally, use the following command:
-- `mvn spring-boot:run`
+- `./gradlew bootRun`
 
 The service will be accessible at `http://localhost:8080`.
 
 ## Running Tests
 
 This project follows a TDD approach. To run all unit tests, execute the following command:
-- `mvn test`
+- `./gradlew test`
 
 ## API Endpoints
 
