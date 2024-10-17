@@ -72,7 +72,7 @@ This project follows a TDD approach. To run all unit tests, execute the followin
     "initialBalance": 100.50
   }
   ```json
-Response:
+- **Response:**
 {
   "id": "1",
   "name": "John Doe",
