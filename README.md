@@ -81,8 +81,3 @@ This project follows a TDD approach. To run all unit tests, execute the followin
      "balance": 100.50
    }
 ```
-
-### Delete Account
-
-- **URL:** /accounts/{accountId}
-- **Method:** DELETE
