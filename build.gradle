@@ -18,9 +18,23 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	// Spring Boot Starter Web for building web applications
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Spring Boot Starter Data JPA for JPA and database support
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	// H2 Database dependency for an in-memory database
+	implementation 'com.h2database:h2'
+
+	// Testing dependencies
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Spring Boot Test for testing
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Mocking support with JUnit
+	testImplementation 'org.mockito:mockito-core'
 }
 
 tasks.named('test') {
