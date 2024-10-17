@@ -71,15 +71,18 @@ This project follows a TDD approach. To run all unit tests, execute the followin
     "email": "john.doe@example.com",
     "initialBalance": 100.50
   }
-  ```json
+  
 - **Response:**
-{
-  "id": "1",
-  "name": "John Doe",
-  "email": "john.doe@example.com",
-  "balance": 100.50
-}
+ ```json
+   {
+     "id": "1",
+     "name": "John Doe",
+     "email": "john.doe@example.com",
+     "balance": 100.50
+   }
+```
 
 ### Delete Account
+
 - **URL:** /accounts/{accountId}
 - **Method:** DELETE
