@@ -1,111 +1,85 @@
-Account Service
-Description
-Account Service is a RESTful API that manages user accounts. This project allows users to create, retrieve, update, and delete accounts, with comprehensive error handling. It's built with Spring Boot, JPA, and includes unit tests using JUnit and MockMvc.
+# Account Service
 
-Features
-Create Account: Users can create new accounts.
-Retrieve Account: Fetch details of existing accounts by ID.
-Update Account: Update account details.
-Delete Account: Remove an account from the system.
-Error Handling: Custom error messages for account/user not found.
-Technologies
-Java 17
-Spring Boot
-Spring Data JPA
-H2 Database (for testing)
-JUnit 5
-MockMvc
-Gradle
-Requirements
-JDK 17+
-Gradle 7+
-Docker (optional for running in containers)
-Setup & Installation
-Clone the repository:
+Account Service is a Spring Boot microservice that provides account management features such as creating, retrieving, and deleting user accounts. This service is developed with a REST API and follows TDD (Test-Driven Development) practices.
 
-bash
-Copy code
-git clone https://github.com/your-username/account-service.git
-cd account-service
-Build the project:
+## Table of Contents
 
-bash
-Copy code
-./gradlew clean build
-Run the application:
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Running Tests](#running-tests)
+- [API Endpoints](#api-endpoints)
+- [Error Codes](#error-codes)
+- [Contributing](#contributing)
+- [License](#license)
 
-bash
-Copy code
-./gradlew bootRun
-Run tests:
+## Technologies Used
 
-bash
-Copy code
-./gradlew test
-API Endpoints
-1. Create Account
-POST /accounts
+- Java 11
+- Spring Boot 2.x
+- Maven 3.6.x
+- JUnit 5
+- Mockito
+- H2 Database (for testing)
 
-json
-Copy code
-Request Body:
+## Installation
+
+1. Clone the repository:
+   - `git clone https://github.com/your-username/account-service.git`
+   
+2. Navigate to the project directory:
+   - `cd account-service`
+   
+3. Build the project using Maven:
+   - `mvn clean install`
+
+## Running the Application
+
+To run the application locally, use the following command:
+- `mvn spring-boot:run`
+
+The service will be accessible at `http://localhost:8080`.
+
+## Running Tests
+
+This project follows a TDD approach. To run all unit tests, execute the following command:
+- `mvn test`
+
+## API Endpoints
+
+### Get Account by ID
+
+- **URL:** `/accounts/{accountId}`
+- **Method:** `GET`
+- **Response:**
+  ```json
+  {
+    "id": "1",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "balance": 100.50
+  }
+
+### Create Account
+
+- **URL:** /accounts
+- **Method:** POST
+- **Request Body:**
+  ```json
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "initialBalance": 100.50
+  }
+  ```json
+Response:
 {
+  "id": "1",
   "name": "John Doe",
-  "email": "johndoe@example.com",
-  "password": "securepassword"
+  "email": "john.doe@example.com",
+  "balance": 100.50
 }
 
-Response:
-HTTP 201 Created
-{
-  "id": 1,
-  "name": "John Doe",
-  "email": "johndoe@example.com",
-  "createdAt": "2024-10-18T10:20:30Z"
-}
-2. Get Account by ID
-GET /accounts/{id}
-
-json
-Copy code
-Response:
-HTTP 200 OK
-{
-  "id": 1,
-  "name": "John Doe",
-  "email": "johndoe@example.com",
-  "createdAt": "2024-10-18T10:20:30Z"
-}
-3. Update Account
-PUT /accounts/{id}
-
-json
-Copy code
-Request Body:
-{
-  "name": "John Smith",
-  "email": "johnsmith@example.com"
-}
-
-Response:
-HTTP 200 OK
-{
-  "id": 1,
-  "name": "John Smith",
-  "email": "johnsmith@example.com",
-  "updatedAt": "2024-10-18T12:34:56Z"
-}
-4. Delete Account
-DELETE /accounts/{id}
-
-json
-Copy code
-Response:
-HTTP 204 No Content
-Error Handling
-The API provides meaningful error responses in case of failure. Here are some common errors:
-
-Status Code	Error Code	Message
-404	ACC0004	Account not found
-400	ACC0002	Invalid request
-500	ACC0005	Internal server error
+### Delete Account
+- **URL:** /accounts/{accountId}
+- **Method:** DELETE
