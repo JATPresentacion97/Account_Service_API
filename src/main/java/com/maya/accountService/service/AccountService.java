@@ -5,8 +5,6 @@ import com.maya.accountService.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-
 @Service
 public class AccountService {
 
@@ -16,7 +14,7 @@ public class AccountService {
     public Account createAccount(String username, String password, String fullname) {
         Account account = new Account();
         account.setUsername(username);
-        account.setPassword(hashPassword(password)); // Password should be hashed
+        account.setPassword(hashPassword(password));
         account.setFullname(fullname);
         return accountRepository.save(account);
     }
@@ -26,8 +24,6 @@ public class AccountService {
     }
 
     private String hashPassword(String password) {
-        // For simplicity, we're not implementing password hashing here.
-        // In a real application, use BCrypt or another secure hashing function.
         return password;
     }
 
