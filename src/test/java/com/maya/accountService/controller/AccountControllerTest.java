@@ -55,7 +55,6 @@ public class AccountControllerTest {
     }
 
     // Test case for POST /accounts with invalid data (username too short)
-    // Test case for POST /accounts with invalid data (username too short)
     @Test
     public void testCreateAccountInvalidUsername() throws Exception {
         Account account = new Account();
