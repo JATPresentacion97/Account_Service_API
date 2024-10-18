@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "1cb0bbe8-87b8-409c-be89-08816907a9dd",
+		"name": "Account Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7833545"
+	},
+	"item": [
+		{
+			"name": "Create an Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"user1\",\r\n  \"password\": \"password123\",\r\n  \"fullname\": \"John Doe\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aaccounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aaccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account by Username",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "accessToken=eyJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAtMjU2In0.gu3cOiycAO-ZdYPX-TnENN-xHC3a5pO5Jgo3jDHfgclqnQqgV1cy2rbhi4QPykNOsW2_vhrCwrWQfFLnHWIXIfZxZ75U4kWIYQcXonTSGuBJznftc0F_TN26zCQxDRyXireXdBMQq2GUdcdDxy3bEz3XRme_FkFr4a9xdorXMWMVTYQU-HXdueyAC28SvDhG1OKbOfIi-2Hfb8ZHybJyqqd1ljjh3XLAdDqaRh393QPjHMBrr43KEb4EKp407GCx-_u1kyGOLpUqWC2RjN56jW9mvpYXvJzvlgUCFG9ScMQkUrByiv8XzR-eg3Wn72nyOErZ8tpIqt-bKZWPjbL0sQ.O264DNGdiL4IY70Z.Kvro3iqJ_eGnoRXZSAs-uwE2wW_Awtqqw8RR6IpWpZdradZI_l0w8-5NxCxNATJ0IB4ksXpm2FSCCkS-TdiPEA_lzoD7muB9RYNp2HCLnWtj9yZy_c75dqR3lRXVvEyuVlkCSKLnG-exhLLaQ6m3vAzGJXyLb-mQiWVH5B1JzI-XAB6gixEFKsY1DUtbgvdBvJMuhcM__HyrO3Cf7axpX_-2dgv1vlpZ-pJ3ZBIAjzoCZXfLjFpEPFqn8hgwX0kazEeFuSDpCbcJmFXcgcDrgSL1QupmucwJuMCY91B5VM6hSbvyyrjWu4kUZjmIUGwPKabn1hCz_hgv96u-HObPr2BN6MTEoSl-4kJMyKAfo1buMeVGSXhgKXQKSMNeT1nbl_PD-nujzcJKSlZdKvcE8zk5Cqhyr67jFlbxjrDOCHc1Nu-tAIOFONY1mi65U35VKCtN79OTxX4cxPpGtH_NTIICSz7-dDfGueqroRssA_QU63BPnU0_9G6my7iXzm8sbqfeq7K4SlBJGZA6uH54_cB7i5V1ixYk4DY_wRmo_qACIiax9ZMMvOqZPAfLFFAAvGn4fcj2mM8zimxgrcrJ-KutDc8p4jSrAjpDGvMN0k8l6t5c5UX1aATVnxufRrDR08KwWlbgowQs-OVDK55rh8-wU7zYZGSNEb0cIyzjfNgsJEadPoE2Znmh_wswkoPkgfNbmhyD-mHCOmUgPmnEIq8ZZOJE4MLkzaFdQm89-YCOKtDheZkOOBKw-xRsqXy3k-mBssW4psOXf7uryzIYr58BHaIqgc8S95wLELOXBOZmHXtFn4XIJHdpm8ZX89kxQAEI7ITyJfuwXCvgS57ScFxHDDkGHeFvJvYDcDO5Hg19tdOk8GOF423mymvFyFYt7ISEkVNDQ80S9-6yEDbZJPEPfUjAHJujQbG2e72NCW9ZXsRUY8jmJmBMgpqeHqLYXaeP1OuknyIKco_35V_d2kMKk9bPrwiWzH5I62mV3bTZJc5SWb7KqCiQ_Q2Y8ze3iZobd54-1o22fRdU2JgKXi5ik1E-uGvw8RNUcH-I_OAO23eRII646zNlJymBr3iHSg7U8o8z3JC731EF-XhWp3cjQPyR0ghamo9Bc_fJJxEWE6TkqbW_wrVaiWqD-1inhCpZP3AgN8TtRbwTBfQbYxCDvmkwmYhkVIj3WrBWVS_Bd1AQ.G7_5DF3gRnavs5I6uUogrQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/accounts/user1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"user1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
